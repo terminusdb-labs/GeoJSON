@@ -8,5 +8,5 @@ Example:
 ```shell
 terminusdb db create admin/geojson
 terminusdb doc insert admin/geojson -g schema < geojson.json
-echo '{"type" : "Point", "coordinates" : [48.2082,16.3738]}' | terminusdb doc insert admin/gj
+echo '{"type" : "Point", "coordinates" : [48.2082,16.3738]}' | terminusdb doc insert admin/geojson
 ```
