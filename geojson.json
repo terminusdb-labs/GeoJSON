@@ -4,11 +4,19 @@
         "@schema": "terminusdb:///schema#",
         "@type": "@context"
     },
-    {
-        "@id": "name",
-        "@type": "Class",
-        "properties": "Properties",
-        "type": "Name_Type"
+    { "@type" : "Class",
+      "@id" : "FeatureCollection",
+      "@key" : { "@type" : "Random" },
+      "@unfoldable" : [],
+      "name" : { "@type" : "Optional",
+                 "@class" : "xsd:string" },
+      "type": "FeatureCollection_Type",
+      "crs" : { "@type" : "Optional",
+                "@class" : "name" },
+      "properties" : { "@type" : "Optional",
+                       "@class" : "sys:JSON" },
+      "features" : { "@type" : "Set",
+                     "@class": "Feature"}
     },
     {
         "@id": "Polygon",
@@ -38,11 +46,10 @@
         },
         "type": "FeatureCollection_Type"
     },
-    {
-        "@abstract": [],
-        "@id": "Geometry",
-        "@type": "Class",
-        "@unfoldable": []
+    { "@type" : "Class",
+      "@id" : "Geometry",
+      "@abstract" : [],
+      "@unfoldable" : []
     },
     {
         "@id": "GeometryCollection_Type",
@@ -137,31 +144,6 @@
         ]
     },
     {
-        "@id": "CRS84",
-        "@inherits": "Properties",
-        "@type": "Class",
-        "name": "CRS84_Type"
-    },
-    {
-        "@abstract": [],
-        "@id": "Properties",
-        "@type": "Class"
-    },
-    {
-        "@id": "OSiProperties",
-        "@inherits": "Properties",
-        "@type": "Class",
-        "NAMN1": "xsd:string",
-        "OBJECTID": "xsd:integer"
-    },
-    {
-        "@id": "CRS84_Type",
-        "@type": "Enum",
-        "@value": [
-            "urn:ogc:def:crs:OGC:1.3:CRS84"
-        ]
-    },
-    {
         "@id": "FeatureCollection_Type",
         "@type": "Enum",
         "@value": [
@@ -186,7 +168,8 @@
             "@class": "xsd:string",
             "@type": "Optional"
         },
-        "properties": "Properties",
+        "properties": { "@type" : "Optional",
+                        "@class" : "sys:JSON" },
         "title": {
             "@class": "xsd:string",
             "@type": "Optional"
