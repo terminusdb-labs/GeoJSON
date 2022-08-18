@@ -4,7 +4,8 @@
         "@schema": "terminusdb:///schema#",
         "@type": "@context"
     },
-    { "@type" : "GeoJSON",
+    { "@type" : "Class",
+      "@id" : "GeoJSON",
       "@abstract" : [],
       "bbox" : { "@class" : "xsd:decimal",
                  "@dimensions" : 1,
