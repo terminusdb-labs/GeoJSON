@@ -4,15 +4,22 @@
         "@schema": "terminusdb:///schema#",
         "@type": "@context"
     },
+    { "@type" : "GeoJSON",
+      "@abstract" : [],
+      "bbox" : { "@class" : "xsd:decimal",
+                 "@dimensions" : 1,
+                 "@type" : "Array" }
+    },
     { "@type" : "Class",
       "@id" : "FeatureCollection",
+      "@inherits": "GeoJSON",
       "@key" : { "@type" : "Random" },
       "@unfoldable" : [],
       "name" : { "@type" : "Optional",
                  "@class" : "xsd:string" },
       "type": "FeatureCollection_Type",
       "crs" : { "@type" : "Optional",
-                "@class" : "name" },
+                "@class" : "sys:JSON" },
       "properties" : { "@type" : "Optional",
                        "@class" : "sys:JSON" },
       "features" : { "@type" : "Set",
@@ -29,25 +36,9 @@
         },
         "type": "Polygon_Type"
     },
-    {
-        "@id": "FeatureCollection",
-        "@type": "Class",
-        "crs": {
-            "@class": "name",
-            "@type": "Optional"
-        },
-        "features": {
-            "@class": "Feature",
-            "@type": "Set"
-        },
-        "name": {
-            "@class": "xsd:string",
-            "@type": "Optional"
-        },
-        "type": "FeatureCollection_Type"
-    },
     { "@type" : "Class",
       "@id" : "Geometry",
+      "@inherits": "GeoJSON",
       "@abstract" : [],
       "@unfoldable" : []
     },
@@ -153,12 +144,8 @@
     {
         "@id": "Feature",
         "@type": "Class",
+        "@inherits": "GeoJSON",
         "@unfoldable": [],
-        "bbox": {
-            "@class": "xsd:string",
-            "@dimensions": 1,
-            "@type": "Array"
-        },
         "centerline": {
             "@class": "Geometry",
             "@type": "Optional"
