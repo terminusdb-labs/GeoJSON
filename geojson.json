@@ -66,7 +66,7 @@
         "@type": "Class",
         "coordinates": {
             "@class": "xsd:decimal",
-            "@dimensions": 3,
+            "@dimensions": 4,
             "@type": "Array"
         },
         "type": "MultiPolygon_Type"
