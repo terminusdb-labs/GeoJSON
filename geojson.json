@@ -65,7 +65,7 @@
         "@inherits": "Geometry",
         "@type": "Class",
         "coordinates": {
-            "@class": "xsd:decimal",
+            "@class": "xsd:double",
             "@dimensions": 4,
             "@type": "Array"
         },
@@ -76,7 +76,7 @@
         "@inherits": "Geometry",
         "@type": "Class",
         "coordinates": {
-            "@class": "xsd:decimal",
+            "@class": "xsd:double",
             "@dimensions": 2,
             "@type": "Array"
         },
@@ -87,7 +87,7 @@
         "@inherits": "Geometry",
         "@type": "Class",
         "coordinates": {
-            "@class": "xsd:decimal",
+            "@class": "xsd:double",
             "@dimensions": 1,
             "@type": "Array"
         },
